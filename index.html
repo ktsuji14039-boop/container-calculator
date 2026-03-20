@@ -467,6 +467,48 @@
     color: #374151;
   }
 
+  /* スマホ対応 */
+  @media (max-width: 640px) {
+    .header { padding: 32px 20px; }
+    .header h1 { font-size: 22px; }
+    .header .subtitle { font-size: 14px; }
+    .container { padding: 20px 12px 60px; }
+    .section { padding: 20px 16px; }
+    .section h2 { font-size: 17px; }
+
+    /* 2列 → 1列 */
+    .problem-grid,
+    .container-compare { grid-template-columns: 1fr; }
+
+    /* 3列 → 1列 */
+    .effect-grid { grid-template-columns: 1fr; }
+
+    /* フロー図：横 → 縦 */
+    .flow { flex-direction: column; gap: 0; }
+    .flow-step { min-width: auto; width: 100%; }
+    .flow-arrow { transform: rotate(90deg); margin: 4px 0; }
+
+    /* 画面モック：4列 → 2列 */
+    .mock-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .screen-body { padding: 16px; }
+    .mock-result .result-num { font-size: 36px; }
+
+    /* 比較テーブル */
+    .compare-table th,
+    .compare-table td { padding: 8px 10px; font-size: 12px; }
+
+    /* ロードマップ：横並び → 縦積み */
+    .roadmap-level { flex-direction: column; }
+    .roadmap-badge { min-width: auto; padding: 12px; flex-direction: row; gap: 8px; }
+    .roadmap-badge .rb-icon { font-size: 22px; margin: 0; }
+    .roadmap-body { padding: 14px 16px; }
+    .roadmap-body .rm-title { font-size: 15px; }
+
+    /* シーン */
+    .scene-box { padding: 16px; }
+    .knowledge-box { padding: 16px; }
+  }
+
   /* フッター */
   .footer {
     text-align: center;
