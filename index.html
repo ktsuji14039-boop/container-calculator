@@ -484,14 +484,15 @@
     .effect-grid { grid-template-columns: 1fr; }
 
     /* フロー図：横 → 縦 */
-    .flow { flex-direction: column; gap: 0; }
-    .flow-step { min-width: auto; width: 100%; }
-    .flow-arrow { transform: rotate(90deg); margin: 4px 0; }
+    .flow { flex-direction: column; gap: 0; align-items: center; }
+    .flow-step { min-width: auto; width: 80%; }
+    .flow-arrow { display: block; transform: rotate(90deg); margin: 2px 0; }
 
-    /* 画面モック：4列 → 2列 */
-    .mock-row { grid-template-columns: 1fr 1fr; gap: 8px; }
-    .screen-body { padding: 16px; }
+    /* 画面モック：スマホでは簡易表示 */
+    .mock-row { grid-template-columns: 1fr; gap: 6px; }
+    .screen-body { padding: 14px; }
     .mock-result .result-num { font-size: 36px; }
+    .mock-label { margin-top: 8px; }
 
     /* 比較テーブル */
     .compare-table th,
